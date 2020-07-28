@@ -1,0 +1,14 @@
+<%= form_for @conn, Routes.page_path(@conn, :add), fn f -> %>
+  <label>
+    num a: <%= number_input f, :a, value: @a %>
+  </label>
+
+  <label>
+    num b: <%= number_input f, :b, value: @b%>
+  </label>
+
+  <label>
+    a +b = <%= @sum_a_b%>
+  </label>
+  <%= submit "Submit" %>
+<% end %>
